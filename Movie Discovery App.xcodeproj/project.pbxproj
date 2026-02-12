@@ -6,20 +6,81 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		95ED46DA2F3D2C9700D290A6 /* MovieModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95ED46D82F3D2C9700D290A6 /* MovieModel.xcdatamodeld */; };
+		95ED47092F3D31E900D290A6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 95ED47082F3D31E900D290A6 /* FirebaseAnalytics */; };
+		95ED470B2F3D31E900D290A6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 95ED470A2F3D31E900D290A6 /* FirebaseAuth */; };
+		95ED470D2F3D31E900D290A6 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 95ED470C2F3D31E900D290A6 /* FirebaseDatabase */; };
+		95ED470F2F3D31E900D290A6 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 95ED470E2F3D31E900D290A6 /* FirebaseFirestore */; };
+		95ED47122F3D336C00D290A6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 95ED47112F3D336C00D290A6 /* Kingfisher */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		95ED471F2F3D366700D290A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95ED46B02F3D291400D290A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95ED46B72F3D291400D290A6;
+			remoteInfo = "Movie Discovery App";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		95ED46B82F3D291400D290A6 /* Movie Discovery App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie Discovery App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95ED46D92F3D2C9700D290A6 /* MovieModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MovieModel.xcdatamodel; sourceTree = "<group>"; };
+		95ED47182F3D366100D290A6 /* Movie Discovery AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Movie Discovery AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		95ED47132F3D349200D290A6 /* Exceptions for "Movie Discovery App" folder in "Movie Discovery App" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CacheLogicTests.swift,
+				ProfileValidationTests.swift,
+			);
+			target = 95ED46B72F3D291400D290A6 /* Movie Discovery App */;
+		};
+		95ED47222F3D371800D290A6 /* Exceptions for "Movie Discovery App" folder in "Movie Discovery AppTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CacheLogicTests.swift,
+				ProfileValidationTests.swift,
+			);
+			target = 95ED47172F3D366100D290A6 /* Movie Discovery AppTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		95ED46BA2F3D291400D290A6 /* Movie Discovery App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				95ED47132F3D349200D290A6 /* Exceptions for "Movie Discovery App" folder in "Movie Discovery App" target */,
+				95ED47222F3D371800D290A6 /* Exceptions for "Movie Discovery App" folder in "Movie Discovery AppTests" target */,
+			);
 			path = "Movie Discovery App";
+			sourceTree = "<group>";
+		};
+		95ED47192F3D366100D290A6 /* Movie Discovery AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Movie Discovery AppTests";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		95ED46B52F3D291400D290A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95ED470D2F3D31E900D290A6 /* FirebaseDatabase in Frameworks */,
+				95ED470F2F3D31E900D290A6 /* FirebaseFirestore in Frameworks */,
+				95ED47092F3D31E900D290A6 /* FirebaseAnalytics in Frameworks */,
+				95ED470B2F3D31E900D290A6 /* FirebaseAuth in Frameworks */,
+				95ED47122F3D336C00D290A6 /* Kingfisher in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95ED47152F3D366100D290A6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -32,7 +93,9 @@
 		95ED46AF2F3D291400D290A6 = {
 			isa = PBXGroup;
 			children = (
+				95ED46D82F3D2C9700D290A6 /* MovieModel.xcdatamodeld */,
 				95ED46BA2F3D291400D290A6 /* Movie Discovery App */,
+				95ED47192F3D366100D290A6 /* Movie Discovery AppTests */,
 				95ED46B92F3D291400D290A6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				95ED46B82F3D291400D290A6 /* Movie Discovery App.app */,
+				95ED47182F3D366100D290A6 /* Movie Discovery AppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,10 +129,38 @@
 			);
 			name = "Movie Discovery App";
 			packageProductDependencies = (
+				95ED47082F3D31E900D290A6 /* FirebaseAnalytics */,
+				95ED470A2F3D31E900D290A6 /* FirebaseAuth */,
+				95ED470C2F3D31E900D290A6 /* FirebaseDatabase */,
+				95ED470E2F3D31E900D290A6 /* FirebaseFirestore */,
+				95ED47112F3D336C00D290A6 /* Kingfisher */,
 			);
 			productName = "Movie Discovery App";
 			productReference = 95ED46B82F3D291400D290A6 /* Movie Discovery App.app */;
 			productType = "com.apple.product-type.application";
+		};
+		95ED47172F3D366100D290A6 /* Movie Discovery AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95ED471C2F3D366100D290A6 /* Build configuration list for PBXNativeTarget "Movie Discovery AppTests" */;
+			buildPhases = (
+				95ED47142F3D366100D290A6 /* Sources */,
+				95ED47152F3D366100D290A6 /* Frameworks */,
+				95ED47162F3D366100D290A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95ED47202F3D366700D290A6 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				95ED47192F3D366100D290A6 /* Movie Discovery AppTests */,
+			);
+			name = "Movie Discovery AppTests";
+			packageProductDependencies = (
+			);
+			productName = "Movie Discovery AppTests";
+			productReference = 95ED47182F3D366100D290A6 /* Movie Discovery AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -83,6 +175,10 @@
 					95ED46B72F3D291400D290A6 = {
 						CreatedOnToolsVersion = 26.2;
 					};
+					95ED47172F3D366100D290A6 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 95ED46B72F3D291400D290A6;
+					};
 				};
 			};
 			buildConfigurationList = 95ED46B32F3D291400D290A6 /* Build configuration list for PBXProject "Movie Discovery App" */;
@@ -94,18 +190,30 @@
 			);
 			mainGroup = 95ED46AF2F3D291400D290A6;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				95ED47072F3D31E900D290A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				95ED47102F3D336C00D290A6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 95ED46B92F3D291400D290A6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				95ED46B72F3D291400D290A6 /* Movie Discovery App */,
+				95ED47172F3D366100D290A6 /* Movie Discovery AppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		95ED46B62F3D291400D290A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95ED47162F3D366100D290A6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -119,10 +227,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95ED46DA2F3D2C9700D290A6 /* MovieModel.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95ED47142F3D366100D290A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		95ED47202F3D366700D290A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95ED46B72F3D291400D290A6 /* Movie Discovery App */;
+			targetProxy = 95ED471F2F3D366700D290A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		95ED46C12F3D291700D290A6 /* Debug */ = {
@@ -251,6 +375,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2N29D3D4NY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -282,7 +407,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2N29D3D4NY;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -303,6 +430,48 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		95ED471D2F3D366100D290A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2N29D3D4NY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alibek.Movie-Discovery-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Movie Discovery App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Movie Discovery App";
+			};
+			name = Debug;
+		};
+		95ED471E2F3D366100D290A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2N29D3D4NY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alibek.Movie-Discovery-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Movie Discovery App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Movie Discovery App";
 			};
 			name = Release;
 		};
@@ -327,7 +496,76 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		95ED471C2F3D366100D290A6 /* Build configuration list for PBXNativeTarget "Movie Discovery AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95ED471D2F3D366100D290A6 /* Debug */,
+				95ED471E2F3D366100D290A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		95ED47072F3D31E900D290A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.9.0;
+			};
+		};
+		95ED47102F3D336C00D290A6 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.6.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		95ED47082F3D31E900D290A6 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95ED47072F3D31E900D290A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		95ED470A2F3D31E900D290A6 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95ED47072F3D31E900D290A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		95ED470C2F3D31E900D290A6 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95ED47072F3D31E900D290A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		95ED470E2F3D31E900D290A6 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95ED47072F3D31E900D290A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		95ED47112F3D336C00D290A6 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95ED47102F3D336C00D290A6 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		95ED46D82F3D2C9700D290A6 /* MovieModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				95ED46D92F3D2C9700D290A6 /* MovieModel.xcdatamodel */,
+			);
+			currentVersion = 95ED46D92F3D2C9700D290A6 /* MovieModel.xcdatamodel */;
+			path = MovieModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 95ED46B02F3D291400D290A6 /* Project object */;
 }

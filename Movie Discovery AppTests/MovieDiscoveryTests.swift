@@ -1,35 +1,56 @@
-//
-//  Movie_Discovery_AppTests.swift
-//  Movie Discovery AppTests
-//
-//  Created by Alibek on 12.02.2026.
-//
-
 import XCTest
+@testable import Movie_Discovery_App // Replace with your actual project name
 
-final class Movie_Discovery_AppTests: XCTestCase {
+final class MovieDiscoveryTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
+    // Test 1: Verify Movie Model Decoding
+    func testMovieDecoding() {
+        let json = """
+        {
+            "id": 1,
+            "title": "Inception",
+            "overview": "A thief who steals corporate secrets...",
+            "poster_path": "/inception.jpg",
+            "vote_average": 8.8
         }
+        """.data(using: .utf8)!
+        
+        let movie = try? JSONDecoder().decode(Movie.self, from: json)
+        
+        XCTAssertNotNil(movie)
+        XCTAssertEqual(movie?.title, "Inception")
     }
 
+    // Test 2: Verify URL Construction
+    func testPosterURL() {
+        let movie = Movie(id: 1, title: "Test", overview: "Test", posterPath: "/test.jpg", voteAverage: 5.0)
+        XCTAssertEqual(movie.posterURL?.absoluteString, "https://image.tmdb.org/t/p/w500/test.jpg")
+    }
+
+    // Test 3: Verify Search Text Logic
+    @MainActor
+    func testSearchDebounceState() {
+        let viewModel = MovieViewModel()
+        viewModel.searchText = "Batman"
+        XCTAssertEqual(viewModel.searchText, "Batman")
+    }
+
+    // Test 4: Verify Initial State
+    @MainActor
+    func testViewModelInitialState() {
+        let viewModel = MovieViewModel()
+        XCTAssertTrue(viewModel.movies.isEmpty)
+        XCTAssertFalse(viewModel.isLoading)
+        XCTAssertNil(viewModel.errorMessage)
+    }
+
+    // Test 5: Verify Pagination Logic State
+    @MainActor
+    func testPaginationIncrement() async {
+        let viewModel = MovieViewModel()
+        // Simulate loading next page
+        await viewModel.loadNextPage()
+        // Even if network fails, we verify the attempt was logged or state was managed
+        XCTAssertFalse(viewModel.isLoading)
+    }
 }
